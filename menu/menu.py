@@ -5,24 +5,27 @@ def mostrar_menu_principal():
     return questionary.select(
         "selecciona una opción: ",
         choices=[
-            "ver menú",
-            "buscar plato",
-            "agregar al pedido",
-            "ver pedido",
-            "salir"
-
-        ]
+            "Ver menú",
+            "Buscar plato",
+            "Agregar al carrito",
+            "Vaciar carrito",
+            "Salir"
+         ]
 
     ).ask()
 
-mostrar_menu_principal()
 
-
-def pedir_texto(mensaje)
+def pedir_texto(mensaje):
     return questionary.text(mensaje).ask()
 
 def pedir_numero(mensaje:str):
     valor = questionary.text(mensaje).ask()
     return int(valor)
 
-pedir_numero
+def mostrar_platos(platos):
+    if not platos:
+        print("No hay resultados")
+        return
+    
+    for p in platos:
+        print(f"{p['id']} - {p['nombre']} (${p['precio']}) [{p['categoria']}]")

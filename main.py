@@ -1,5 +1,5 @@
-from menu.menu import mostrar_menu_principal
-from logica.logica_menu import listar_menu
+from menu.menu import mostrar_menu_principal, mostrar_platos, pedir_texto
+from logica.logica_menu import listar_menu, buscar_platos
 from data.menu_data import menu
 
 
@@ -13,10 +13,16 @@ def main():
           platos = listar_menu(menu)
           mostrar_platos(platos)
          
-      elif opcion == "Buscar plato":
-         texto = pedir_texto("que quieres comer?")
-         resultado = buscar_platos(menu, texto)
-         mostrar_platos(resultado)
+       elif opcion == "Buscar plato":
+          texto = pedir_texto("que quieres comer?")
+          resultado = buscar_platos(menu, texto)
+          mostrar_platos(resultado)
+    
+       elif opcion == "Agregar al carrito":
+          pass
+
+
+
 main()
 
-def mostrar_platos(platos):
+
