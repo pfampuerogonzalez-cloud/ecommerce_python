@@ -1,5 +1,4 @@
 
-
 def listar_menu(menu):
     return menu
 

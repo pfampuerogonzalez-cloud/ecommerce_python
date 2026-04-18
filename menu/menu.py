@@ -8,6 +8,7 @@ def mostrar_menu_principal():
             "Ver menú",
             "Buscar plato",
             "Agregar al carrito",
+            "Ver carrito"
             "Vaciar carrito",
             "Salir"
          ]
@@ -18,7 +19,7 @@ def mostrar_menu_principal():
 def pedir_texto(mensaje):
     return questionary.text(mensaje).ask()
 
-def pedir_numero(mensaje:str):
+def pedir_numero(mensaje):
     valor = questionary.text(mensaje).ask()
     return int(valor)
 

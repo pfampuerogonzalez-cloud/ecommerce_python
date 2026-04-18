@@ -1,4 +1,4 @@
-def agregar_a_carrito(carrito,plato,cantidad):
+def agregar_al_carrito(carrito,plato,cantidad):
     carrito.append({
         "plato":plato, 
         "cantidad":cantidad
